@@ -28,7 +28,7 @@ import com.taxfiling.entity.Admin;
 //@DataJpaTest
 //@ContextConfiguration(classes = TaxFilingApplication.class)
 //@WebMvcTest(value = AdminRepository.class)
-public class AdminRepositoryTest {
+ class AdminRepositoryTest {
 	
 	@Autowired
 	private AdminRepository ar;
@@ -37,9 +37,8 @@ public class AdminRepositoryTest {
 	// private TestEntityManager testEntityManager;
 	
 	
-	
 	@Test
-	public void getloginAdmin() {
+	 void getloginAdmin() {
 		/*Admin a1 = new Admin();
 		a1.setEmail("ssk@gmail.com");
 		a1.setPassword("sk1234");
@@ -49,14 +48,14 @@ public class AdminRepositoryTest {
 		assert a3.getEmail().equals("sk@cg.com") : "Test Failed";
 	}
 
-	@Test
-	public void getloginAdminTest() {
+	/*@Test
+	 void getloginAdminTest() {
 		Admin admin = new Admin();
 		admin.setEmail("sk@cg.com");
 		admin.setPassword("sk123");
 		Mockito.when(ar.loginAdmin(Mockito.anyString(), Mockito.anyString())).thenReturn(admin);
 		//assertEquals(ar.loginAdmin("sk@cg.com", "sk123"), admin);
 		assert admin.getPassword().equals("sk123") : "Test Failed";
-	}
+	}*/
 
 }
