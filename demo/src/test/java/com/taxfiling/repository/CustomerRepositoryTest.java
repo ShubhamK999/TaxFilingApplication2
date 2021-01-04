@@ -13,6 +13,8 @@ import com.taxfiling.TaxFilingApplication;
 import com.taxfiling.entity.Customer;
 import com.taxfiling.entity.TaxForm;
 
+import junit.framework.Assert;
+
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = TaxFilingApplication.class)
@@ -27,14 +29,16 @@ public class CustomerRepositoryTest {
 	@Test
 	public void getCustByPanTest() {
 		Customer c = cr.getCustByPan("asdf");
-		assert c.getName().equals("ssk") : "Test Failed";
+		//assert c.getName().equals("ssk") : "Test Failed";
+		Assert.assertEquals(c.getName(), "ssk");
 		
 	}
 	
 	@Test
 	public void loginCustomerTest() {
 		Customer c = cr.loginCustomer((long) 5, "dkdj");
-		assert c.getName().equals("ssk");
+		//assert c.getName().equals("ssk");
+		Assert.assertEquals(c.getName(), "ssk");
 	}
 	
 }

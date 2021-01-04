@@ -22,6 +22,8 @@ import com.taxfiling.TaxFilingApplication;
 import com.taxfiling.controller.RegistrationController;
 import com.taxfiling.entity.Admin;
 
+import junit.framework.Assert;
+
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = TaxFilingApplication.class)
@@ -45,7 +47,8 @@ import com.taxfiling.entity.Admin;
 		Admin a2 = testEntityManager.persist(a1);*/
 		Admin a3 = ar.loginAdmin("sk@cg.com", "sk123");
 		//System.out.println(a3.getEmail());
-		assert a3.getEmail().equals("sk@cg.com") : "Test Failed";
+		//assert a3.getEmail().equals("sk@cg.com") : "Test Failed";
+		Assert.assertEquals(a3.getEmail(), "sk@cg.com");
 	}
 
 	/*@Test

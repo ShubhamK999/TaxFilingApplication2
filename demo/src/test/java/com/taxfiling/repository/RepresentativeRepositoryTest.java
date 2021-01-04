@@ -11,6 +11,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 import com.taxfiling.TaxFilingApplication;
 import com.taxfiling.entity.Representative;
 
+import junit.framework.Assert;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = TaxFilingApplication.class)
 public class RepresentativeRepositoryTest {
@@ -22,6 +24,7 @@ public class RepresentativeRepositoryTest {
 	public void loginRepresentative() {
 		Representative r = rr.loginRepresentative(1, "password");
 		assert r.getName().equals("rep100") : "Test Failed";
+		Assert.assertEquals(r.getName(), "rep100");
 	}
 
 }

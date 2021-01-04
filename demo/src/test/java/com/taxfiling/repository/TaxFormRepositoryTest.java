@@ -11,6 +11,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 import com.taxfiling.TaxFilingApplication;
 import com.taxfiling.entity.TaxForm;
 
+import junit.framework.Assert;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = TaxFilingApplication.class)
 public class TaxFormRepositoryTest {
@@ -22,7 +24,8 @@ public class TaxFormRepositoryTest {
 	public void getTaxFormByPan() {
 		TaxForm t1 = tr.getTaxFormByPan("asdf");
 		double tt = t1.getTotalIncomeSalary();
-		assert tt==1500000 : "Test Failed";
+		//assert tt==1500000 : "Test Failed";
+		Assert.assertEquals(tt,1500000.0);
 		
 	}
 }

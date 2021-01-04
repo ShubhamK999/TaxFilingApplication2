@@ -20,7 +20,6 @@ public class AddTaxDetailsServiceImpl implements AddTaxDetailsService {
 	@Override
 	public int addTaxDetailsForEmployeeService(TaxForm objTaxForm) {
 		taxformRepo.save(objTaxForm);
-		System.out.println("*******************");
 		return 1;
 	}
 
