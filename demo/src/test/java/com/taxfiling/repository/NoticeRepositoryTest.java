@@ -39,7 +39,8 @@ public class NoticeRepositoryTest {
 	@Test
 	public void viewRepresentativeNotice() {
 		List<Notice> n3 = nr.viewRepresentativeNotice((long) 1);
-		assert n3.get(0).getNoticeBody().equals("Rejected") : "Test Failed";
+		//assert n3.get(0).getNoticeBody().equals("Rejected") : "Test Failed";
+		Assert.assertEquals(n3.get(0).getNoticeBody(), "Rejected");
 	}
 
 }
