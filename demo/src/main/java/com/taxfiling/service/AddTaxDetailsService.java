@@ -1,5 +1,6 @@
 package com.taxfiling.service;
 
+import com.taxfiling.entity.Customer;
 import com.taxfiling.entity.TaxForm;
 
 public interface AddTaxDetailsService {
@@ -7,4 +8,6 @@ public interface AddTaxDetailsService {
 
 	int addTaxDetailsByNewCustomerService(TaxForm objTaxForm);
 	int addTaxDetailsByCustomerService(TaxForm objTaxForm);
+
+	Customer getCustomerByPan(String pan);
 }

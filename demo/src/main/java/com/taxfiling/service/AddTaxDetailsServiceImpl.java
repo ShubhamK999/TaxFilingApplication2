@@ -20,6 +20,7 @@ public class AddTaxDetailsServiceImpl implements AddTaxDetailsService {
 	@Override
 	public int addTaxDetailsForEmployeeService(TaxForm objTaxForm) {
 		taxformRepo.save(objTaxForm);
+		System.out.println("*******************");
 		return 1;
 	}
 
@@ -52,5 +53,10 @@ public class AddTaxDetailsServiceImpl implements AddTaxDetailsService {
 		c1.setTaxForm(t);
 		customerRepo.save(c1);
 		return 1;
+	}
+
+	@Override
+	public Customer getCustomerByPan(String pan) {
+		return customerRepo.getCustByPan(pan);
 	}
 }
